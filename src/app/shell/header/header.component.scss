@@ -1,0 +1,50 @@
+@import "src/theme/theme-variables";
+:host {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 64px;
+}
+.link {
+  color: $dark-primary-text;
+  &:hover {
+    color: #fff;
+  }
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  .logo {
+    display: flex;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+    margin-left: 12px;
+    img {
+      max-height: 35px;
+      margin-right: 10px;
+    }
+  }
+  a {
+    //text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    @extend .link;
+    &.active {
+      color: $accent-color;
+    }
+  }
+  .lang mat-icon {
+    @extend .link;
+  }
+}
+
+.menu-button {
+  margin-right: 1rem;
+}

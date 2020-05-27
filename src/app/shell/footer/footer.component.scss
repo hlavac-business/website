@@ -1,0 +1,38 @@
+@import "src/theme/theme-variables";
+:host {
+  padding: 0 50px;
+  text-align: center;
+  background: linear-gradient(to left, $gradient-dark1, $gradient-dark2);
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media ($sm-max) {
+    flex-direction: column;
+  }
+}
+h6 {
+  margin: 15px 0 10px 0;
+}
+
+a {
+  color: $accent-color;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.socials {
+  a {
+    text-decoration: none;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
