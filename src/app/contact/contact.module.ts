@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {TranslateModule} from "@ngx-translate/core";
-import {FlexLayoutModule} from "@angular/flex-layout";
+import { TranslateModule } from '@ngx-translate/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
-import {MaterialModule} from "@app/material.module";
-import { ContactRoutingModule } from "./contact-routing.module";
+import { MaterialModule } from '@app/material.module';
+import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -16,8 +16,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MaterialModule,
     ContactRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  declarations: [ContactComponent]
+  declarations: [ContactComponent],
 })
-export class ContactModule { }
+export class ContactModule {}

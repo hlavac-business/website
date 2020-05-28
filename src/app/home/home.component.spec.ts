@@ -25,10 +25,10 @@ describe('HomeComponent', () => {
         Angulartics2Module.forRoot(),
         CoreModule,
         SharedModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
       ],
       declarations: [HomeComponent],
-      providers: [QuoteService]
+      providers: [QuoteService],
     }).compileComponents();
   }));
 

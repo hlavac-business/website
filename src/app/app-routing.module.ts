@@ -3,19 +3,19 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { Shell } from '@app/shell/shell.service';
 
 const routes: Routes = [
-  Shell.childRoutes([
-    { path: 'contact', loadChildren: 'app/contact/contact.module#ContactModule'},
-  ]),
+  Shell.childRoutes([{ path: 'contact', loadChildren: 'app/contact/contact.module#ContactModule' }]),
   // Fallback when no prior route is matched
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules,
-    scrollPositionRestoration: "enabled"
-  })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
-  providers: []
+  providers: [],
 })
 export class AppRoutingModule {}

@@ -65,13 +65,12 @@ h2 {
     padding-left: 5vw;
     font-weight: 500;
     &:before {
-      content: '';
+      content: "";
       width: 100px;
       height: 5px;
       top: 0;
       position: absolute;
       background: $accent-color;
-
     }
   }
 }
@@ -86,7 +85,7 @@ h2 {
 }
 
 %bg-circle {
-  content: '';
+  content: "";
   position: absolute;
   background-attachment: fixed;
   width: 400px;
@@ -101,8 +100,12 @@ h2 {
   @extend %full-fill;
   z-index: -2;
   @keyframes move-shape-animation {
-    from { background-position-x: 0; }
-    to   { background-position-x: 100px; }
+    from {
+      background-position-x: 0;
+    }
+    to {
+      background-position-x: 100px;
+    }
   }
   &--background {
     background: url("assets/boxes.png");
@@ -218,7 +221,6 @@ h2 {
     text-align: center;
     img {
       max-width: 100%;
-
     }
   }
 
@@ -245,7 +247,7 @@ h2 {
       align-items: center;
       margin-bottom: 15px;
       &:before {
-        content: '';
+        content: "";
         position: relative;
         width: 34px;
         height: 34px;
@@ -335,7 +337,6 @@ h2 {
   .bg {
     background-position: center bottom;
     background-size: calc(100vw + 20%);
-
   }
 }
 

@@ -8,12 +8,12 @@ import {
   HostListener,
   Input,
   ElementRef,
-  Renderer2
+  Renderer2,
 } from '@angular/core';
 import { MediaChange, MediaObserver } from '@angular/flex-layout';
 import { MatSidenav } from '@angular/material';
-import {Router, RouterOutlet} from '@angular/router';
-import {trigger, state, style, animate, transition, query} from '@angular/animations';
+import { Router, RouterOutlet } from '@angular/router';
+import { trigger, state, style, animate, transition, query } from '@angular/animations';
 import { fromEvent } from 'rxjs';
 import { distinctUntilChanged, filter, map, pairwise, share, throttleTime } from 'rxjs/operators';
 
@@ -21,12 +21,12 @@ import { untilDestroyed } from '@app/core';
 
 export enum VisibilityState {
   Visible = 'visible',
-  Hidden = 'hidden'
+  Hidden = 'hidden',
 }
 
 export enum Direction {
   Up = 'Up',
-  Down = 'Down'
+  Down = 'Down',
 }
 
 @Component({
@@ -37,26 +37,25 @@ export enum Direction {
     trigger('toggle', [
       state(VisibilityState.Hidden, style({ transform: 'translateY(-100%)' })),
       state(VisibilityState.Visible, style({ transform: 'translateY(0)' })),
-      transition('* => *', animate('300ms linear'))
+      transition('* => *', animate('300ms linear')),
     ]),
-  ]
+  ],
 })
 export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   @ViewChild('cursor') cursor: ElementRef;
   private isVisible = true;
 
-  constructor(
-    private media: MediaObserver,
-    private router: Router,
-  ) {}
+  constructor(private media: MediaObserver, private router: Router) {}
 
   ngOnInit() {
     // Automatically close side menu on screens > sm breakpoint
     this.media
       .asObservable()
       .pipe(
-        filter((changes: MediaChange[]) => changes.some(change => change.mqAlias !== 'xs' && change.mqAlias !== 'sm')),
+        filter((changes: MediaChange[]) =>
+          changes.some((change) => change.mqAlias !== 'xs' && change.mqAlias !== 'sm')
+        ),
         untilDestroyed(this)
       )
       .subscribe(() => this.sidenav.close());

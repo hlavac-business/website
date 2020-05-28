@@ -6,11 +6,9 @@ import { merge } from 'rxjs';
 import { filter, map, switchMap } from 'rxjs/operators';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
-
 import { environment } from '@env/environment';
 import { Logger, I18nService, untilDestroyed } from '@app/core';
 import { fadeIn } from './animations';
-
 
 const log = new Logger('App');
 
@@ -18,7 +16,7 @@ const log = new Logger('App');
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [fadeIn]
+  animations: [fadeIn],
 })
 export class AppComponent implements OnInit, OnDestroy {
   constructor(
@@ -50,7 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
     // Setup translations
     this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
 
-    const onNavigationEnd = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
+    const onNavigationEnd = this.router.events.pipe(filter((event) => event instanceof NavigationEnd));
 
     // Change page title on navigation or language change, based on route data
     merge(this.translateService.onLangChange, onNavigationEnd)
@@ -62,11 +60,11 @@ export class AppComponent implements OnInit, OnDestroy {
           }
           return route;
         }),
-        filter(route => route.outlet === 'primary'),
-        switchMap(route => route.data),
+        filter((route) => route.outlet === 'primary'),
+        switchMap((route) => route.data),
         untilDestroyed(this)
       )
-      .subscribe(event => {
+      .subscribe((event) => {
         const title = event['title'];
         if (title) {
           this.titleService.setTitle(this.translateService.instant(title));

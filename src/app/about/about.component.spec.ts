@@ -12,7 +12,7 @@ describe('AboutComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [BrowserAnimationsModule, FlexLayoutModule, MaterialModule],
-      declarations: [AboutComponent]
+      declarations: [AboutComponent],
     }).compileComponents();
   }));
 

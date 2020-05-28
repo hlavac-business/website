@@ -8,6 +8,6 @@ import { LoaderComponent } from './loader/loader.component';
 @NgModule({
   imports: [FlexLayoutModule, MaterialModule, CommonModule],
   declarations: [LoaderComponent],
-  exports: [LoaderComponent]
+  exports: [LoaderComponent],
 })
 export class SharedModule {}
