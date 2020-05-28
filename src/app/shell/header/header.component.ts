@@ -1,8 +1,8 @@
 import { Title } from '@angular/platform-browser';
 import { Component, OnInit, Input } from '@angular/core';
-import { MatSidenav } from '@angular/material';
 
 import { I18nService } from '@app/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-header',

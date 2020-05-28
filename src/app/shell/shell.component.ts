@@ -11,13 +11,13 @@ import {
   Renderer2,
 } from '@angular/core';
 import { MediaChange, MediaObserver } from '@angular/flex-layout';
-import { MatSidenav } from '@angular/material';
 import { Router, RouterOutlet } from '@angular/router';
 import { trigger, state, style, animate, transition, query } from '@angular/animations';
 import { fromEvent } from 'rxjs';
 import { distinctUntilChanged, filter, map, pairwise, share, throttleTime } from 'rxjs/operators';
 
 import { untilDestroyed } from '@app/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 export enum VisibilityState {
   Visible = 'visible',

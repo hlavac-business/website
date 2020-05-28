@@ -1,4 +1,4 @@
-# hlavac_business_webapp
+# hlavac_business_website
 
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 6.2.1

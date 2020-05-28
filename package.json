@@ -1,5 +1,5 @@
 {
-  "name": "gustav-www",
+  "name": "hlavac-business-website",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -80,7 +80,7 @@
     "ts-node": "~8.10.1",
     "tslint": "~6.1.2",
     "tslint-config-prettier": "~1.18.0",
-    "typescript": "~3.9.3"
+    "typescript": "3.8.3"
   },
   "prettier": {
     "singleQuote": true,
