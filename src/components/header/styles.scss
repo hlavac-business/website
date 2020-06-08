@@ -1,0 +1,65 @@
+@import "src/theme/_theme-variables";
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 64px;
+    background: linear-gradient(to left,rgba(10,14,25,.9), #091623);
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    .headerWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 5px 30px;
+    }
+    .logo {
+        display: inline-flex;
+        flex: 1;
+        color: #fff;
+        font-size: 23px;
+        font-weight: 500;
+        width: 260px;
+        align-items: center;
+        @media ($sm-max) {
+            width: 100px;
+            font-size: 15px;
+        }
+        img {
+            max-height: 35px;
+            margin-right: 10px;
+        }
+    }
+
+    a {
+        //text-transform: uppercase;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        @extend .link;
+        color: $dark-primary-text;
+        
+        &.active, &.active:hover {
+            color: $accent-color;
+        }
+    }
+    .navigation {
+        margin-right: -10px;
+        a {
+            padding: 0 10px;
+        }
+    }
+    .link {
+        color: $dark-primary-text;
+        
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+

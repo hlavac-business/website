@@ -1,0 +1,45 @@
+@import "src/theme/_theme-variables";
+.footer {
+  padding: 20px 30px;
+  text-align: center;
+  background: linear-gradient(to left, $gradient-bg);
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+   @media ($sm-max) {
+    font-size: 12px;
+  }
+}
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media ($sm-max) {
+    flex-direction: column;
+  }
+}
+h6 {
+  margin: 0 0 10px 0;
+}
+
+a {
+  color: $accent-color;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.socials {
+  a {
+      padding: 2px 4px;
+    text-decoration: none;
+        &:hover {
+        color: $accent-color;
+        }
+  }
+  @media ($sm-max) {
+    margin-top: 10px;
+  }
+}

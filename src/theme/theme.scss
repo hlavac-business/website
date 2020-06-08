@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Hind+Siliguri|Montserrat:400,500,600,700,800,900&display=swap");
+@import './_theme-variables';
+// stylelint-disable-next-line selector-max-universal
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: $dark-primary-text;
+  background: linear-gradient(to left, $gradient-bg); 
+}
+
+::selection {
+  background: #68cfc2; /* WebKit/Blink Browsers */
+}
