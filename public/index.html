@@ -12,7 +12,7 @@
     <meta property="og:title" content="Hlavac Business" />
     <meta property="og:description" content="We build the future of your business." />
     <meta property="og:site_name" content="Hlavac Business" />
-    <meta property="og:image" content="https://www.hlavac.business/logojpg" />
+    <meta property="og:image" content="https://www.hlavac.business/logo.jpg" />
 
 
     <link rel="apple-touch-icon" href="/logo_ogg.png" />
@@ -47,12 +47,24 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
 
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyD-5yXOwOaCxyFcGJ-gAe3U8ihRp19rT8g",
+        authDomain: "company-site-d6bb5.firebaseapp.com",
+        databaseURL: "https://company-site-d6bb5.firebaseio.com",
+        projectId: "company-site-d6bb5",
+        storageBucket: "company-site-d6bb5.appspot.com",
+        messagingSenderId: "502058003362",
+        appId: "1:502058003362:web:42fd053fd98fc32e85a0fb"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>
