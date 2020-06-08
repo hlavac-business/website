@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer">
             <div className="container">
                 <div className="wrap">
-                    <div>© 2019 Hlavac Business</div>
+                    <div>© 2020 Hlavac Business</div>
                 <div>
                         <div className="socials">
                             <Link to="">
