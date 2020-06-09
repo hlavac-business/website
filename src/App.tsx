@@ -8,22 +8,25 @@ import './App.scss';
 import { ViewportProvider } from './utils/useViewport';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import ScrollToTop from './utils/scrollTop';
 
 AOS.init();
 
-const App = () => {
+const App = () => { 
   return (
     <ViewportProvider>
       <Router>
         <Header />
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/contact" exact>
-            <Contact />
-          </Route>
-        </Switch>
+        <ScrollToTop>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/contact" exact>
+              <Contact />
+            </Route>
+          </Switch>
+        </ScrollToTop>
         <Footer />
       </Router>
     </ViewportProvider>

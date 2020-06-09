@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useViewport} from '../../utils/useViewport'
 import "./styles.scss"
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
     const { isMobile } = useViewport();
@@ -52,8 +53,8 @@ export const Home = () => {
                         <li data-aos="fade-up">Developing iOs, Android, PWA applications</li>
                     </ul>
 
-                    <div className="stack_inner" data-aos="fade-up" data-aos-delay="500">
-                        <div className="item">
+                    <div className="stack_inner" >
+                        <div className="item" data-aos="fade-up" data-aos-delay="100">
                             <svg
                                 width="30px"
                                 height="26px"
@@ -76,7 +77,7 @@ export const Home = () => {
                                 Angular, VueX, NodeJs, KoaJS, ExpressJs, NestJS.
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="fade-up" data-aos-delay="200">
                             <svg
                                 width="32px"
                                 height="32px"
@@ -100,7 +101,7 @@ export const Home = () => {
                                 PostgreSQL, MySQL, Oracle, NoSQL, Redis, MongoDB, ElasticSearch.
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="fade-up" data-aos-delay="300">
                             <svg
                                 width="32px"
                                 height="24px"
@@ -128,24 +129,32 @@ export const Home = () => {
             </div>
             <div className="white partners">
                 <div className="container">
-                    <h2>Our partners</h2>
-                    <div>We've had the pleasure of working with</div>
+                    <h2 data-aos="fade-up">Our partners</h2>
+                    <div data-aos="fade-up">We've had the pleasure of working with</div>
                     <div className="partners_wrap">
-                        <div className="partners_item">
+                        <div className="partners_item" data-aos="fade-up" data-aos-delay="100">
                             <span className="partners_year">2014 - 2016</span>
-                            <img src="dsoft.png" alt="dSoft logo" />
+                            <Link to="http://dsoft.eu">
+                                <img src="dsoft.png" alt="dSoft logo" />
+                            </Link>
                         </div>
-                        <div className="partners_item">
+                        <div className="partners_item" data-aos="fade-up" data-aos-delay="150">
                             <span className="partners_year">2017</span>
-                            <img src="wezeo.png" alt="" />
+                            <Link to="https://www.wezeo.com">
+                                <img src="wezeo.png" alt="" />
+                            </Link>
                         </div>
-                        <div className="partners_item">
-                            <span className="partners_year">2018</span>
-                            <img src="danube.png" alt=""/>
+                        <div className="partners_item" data-aos="fade-up" data-aos-delay="200">
+                            <span className="partners_year" >2018</span>
+                            <Link to="https://www.danubesoft.com">
+                                <img src="danube.png" alt=""/>
+                            </Link>
                         </div>
-                        <div className="partners_item active">
+                        <div className="partners_item active" data-aos="fade-up" data-aos-delay="250">
                             <span className="partners_year">2018 - today</span>
-                            <img src="rise.png" alt="" />
+                            <Link to="https://rise-world.com/">
+                                <img src="rise.png" alt="" />
+                            </Link>
                         </div>
                     </div>
                 </div>
